@@ -1,0 +1,107 @@
+/* 
+ * AquaRestore RTL Support 
+ */
+
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] .fa-arrow-right {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .fa-arrow-left {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] [data-aos="fade-right"] {
+    transform: translate3d(100px, 0, 0);
+}
+
+html[dir="rtl"] [data-aos="fade-left"] {
+    transform: translate3d(-100px, 0, 0);
+}
+
+/* Fix padding/margins for input icons */
+html[dir="rtl"] input.pl-11 {
+    padding-left: 1rem;
+    padding-right: 2.75rem;
+}
+
+html[dir="rtl"] .absolute.left-0 {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .absolute.right-0 {
+    right: auto;
+    left: 0;
+}
+
+html[dir="rtl"] .pl-4 {
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+html[dir="rtl"] .pr-4 {
+    padding-right: 0;
+    padding-left: 1rem;
+}
+
+html[dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+html[dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+}
+
+/* ---- F) RTL Checklist Layout Fix ---- */
+/* List items: align-start so icon stays top-left, text wraps to content edge */
+html[dir="rtl"] ul li.flex,
+html[dir="rtl"] ul li[class*="flex"] {
+    align-items: flex-start;
+    text-align: right;
+}
+
+/* Icon stays fixed-width, does NOT center itself */
+html[dir="rtl"] ul li.flex i,
+html[dir="rtl"] ul li[class*="flex"] i {
+    flex-shrink: 0;
+    margin-top: 0.2em;
+    width: 1.25em;
+    text-align: center;
+}
+
+/* Text container: stretch, force right-align (RTL natural), never centered */
+html[dir="rtl"] ul li.flex span,
+html[dir="rtl"] ul li[class*="flex"] span,
+html[dir="rtl"] ul li.flex div,
+html[dir="rtl"] ul li[class*="flex"] div {
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+}
+
+/* Wrapped second lines start at the same position as the first line */
+html[dir="rtl"] ul li.flex > div > span,
+html[dir="rtl"] ul li[class*="flex"] > div > span {
+    display: block;
+    text-align: right;
+}
+
+/* Override any inherited text-center that may center list text in RTL */
+html[dir="rtl"] ul li.flex.items-center,
+html[dir="rtl"] ul li.flex.items-start {
+    text-align: right;
+}
+html[dir="rtl"] ul li.flex.items-center span,
+html[dir="rtl"] ul li.flex.items-start span {
+    text-align: right;
+}

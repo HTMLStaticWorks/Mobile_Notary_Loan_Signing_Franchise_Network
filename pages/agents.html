@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents | NotaryFranchise</title>
+    <meta name="description" content="Find certified, background-checked, and E&O insured mobile notary loan signing agents nationwide. 50-state signing coverage and agent verification.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#1d4ed8',
+                            700: '#1e3a8a',
+                            800: '#1e40af',
+                            900: '#0f172a',
+                        },
+                        secondary: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="font-sans text-gray-800 bg-white dark:bg-secondary-900 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <span class="font-heading font-bold text-2xl tracking-tight text-secondary-900 dark:text-white">Notary<span class="text-primary-600">Franchise</span></span>
+                </a>
+
+                <!-- Desktop Nav (1024px & 1440px) -->
+                <nav class="hidden lg:flex items-center gap-1.5 xl:gap-6 2xl:gap-8">
+                    <a href="../index.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Home</a>
+                    <a href="home-2.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Home2</a>
+                    <a href="about.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">About</a>
+                    <a href="services.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Services</a>
+                    <a href="agents.html" class="bg-primary-50 dark:bg-primary-900/20 text-primary-600 px-2.5 py-2 xl:px-4 rounded-lg font-medium text-sm xl:text-base transition-colors">Agents</a>
+                    <a href="contact.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
+                </nav>
+
+                <!-- Right Actions (Desktop 1024px & 1440px) -->
+                <div class="hidden lg:flex items-center gap-2 xl:gap-4">
+                    <button id="themeToggle" class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm xl:text-base"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400 text-sm xl:text-base"></i>
+                    </button>
+                    <button id="rtlToggle" class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR" title="Switch to RTL">
+                        <i class="fa-solid fa-right-left text-sm xl:text-base"></i>
+                    </button>
+                    <!-- Enquire button AFTER RTL button for 1024px and 1440px -->
+                    <a href="enquire.html" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-medium text-sm xl:text-base transition-all shadow-lg shadow-primary-600/30">Enquire</a>
+                </div>
+
+                <!-- Mobile Menu Button (<1024px) -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu (<1024px: 368px, 768px) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-secondary-900 border-t border-gray-100 dark:border-gray-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-xl">
+                <a href="../index.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+                <a href="home-2.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home2</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+                <a href="services.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+                <a href="agents.html" class="block px-3 py-3 text-primary-600 font-medium bg-primary-50 dark:bg-primary-900/20 rounded-lg">Agents</a>
+                <a href="contact.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
+                <a href="enquire.html" class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
+
+                <!-- Mobile Utility Row: Theme + RTL -->
+                <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
+                    <div class="flex items-center gap-3 px-3 pb-2">
+                        <button id="themeToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon dark:hidden"></i>
+                            <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button id="rtlToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle RTL/LTR">
+                            <i class="fa-solid fa-right-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Agents Hero (Standardized with About Page Design) -->
+        <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 bg-gradient-to-br from-gray-50 via-primary-50/40 to-white dark:from-secondary-900 dark:via-secondary-800 dark:to-secondary-900 border-b border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
+                <div class="max-w-3xl mx-auto">
+                    <span class="text-primary-600 font-bold tracking-widest uppercase text-xs mb-3 block">Verified Coverage</span>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold text-secondary-900 dark:text-white mb-6">Find a Certified <span class="text-primary-600">Loan Signing Agent.</span></h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">Access over 5,000 certified mobile notary signing agents nationwide. Fully bonded, background-checked, and covered by $1,000,000 E&amp;O insurance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Agent Search & Filter -->
+        <section class="py-12 bg-white dark:bg-secondary-800 border-b border-gray-100 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <form class="bg-gray-50 dark:bg-secondary-900 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 grid grid-cols-1 md:grid-cols-4 gap-4" onsubmit="event.preventDefault();">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Location / ZIP</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-location-dot absolute left-4 top-3.5 text-gray-400"></i>
+                            <input type="text" placeholder="City or ZIP Code" class="w-full pl-10 pr-4 py-3 rounded-xl bg-white dark:bg-secondary-800 border border-gray-200 dark:border-gray-700 text-secondary-900 dark:text-white focus:outline-none focus:border-primary-600">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Signing Type</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-white dark:bg-secondary-800 border border-gray-200 dark:border-gray-700 text-secondary-900 dark:text-white focus:outline-none focus:border-primary-600">
+                            <option>All Signing Types</option>
+                            <option>Mortgage Refinance</option>
+                            <option>Buyer / Seller Closing</option>
+                            <option>HELOC</option>
+                            <option>Commercial Property</option>
+                            <option>General Mobile Notary</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-2">Capability</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-white dark:bg-secondary-800 border border-gray-200 dark:border-gray-700 text-secondary-900 dark:text-white focus:outline-none focus:border-primary-600">
+                            <option>Mobile On-Site</option>
+                            <option>Remote Online Notary (RON)</option>
+                            <option>Spanish Speaking</option>
+                            <option>24/7 Emergency Dispatch</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-6 rounded-xl transition-colors shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search Agents
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section 3: Verified Agent Profiles Grid -->
+        <section class="py-24 bg-gray-50 dark:bg-secondary-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-primary-600 font-semibold tracking-wide uppercase mb-2">Verified Coverage</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-secondary-900 dark:text-white mb-4">Featured Certified Signing Agents</h3>
+                    <p class="text-gray-600 dark:text-gray-400">All network agents pass rigorous background checks and carry active E&amp;O policies.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Agent 1 -->
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
+                                <div>
+                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Rebecca Miller</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase">Senior Loan Signing Agent</p>
+                                    <div class="flex text-yellow-400 text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span class="text-gray-400 ml-2 font-medium">(1,240 closings)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> New York, NY &amp; Metro Area</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
+                    </div>
+
+                    <!-- Agent 2 -->
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
+                                <div>
+                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Marcus Vance</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase">Certified RON Specialist</p>
+                                    <div class="flex text-yellow-400 text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span class="text-gray-400 ml-2 font-medium">(2,150 closings)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> Dallas, TX &amp; Remote (RON)</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
+                    </div>
+
+                    <!-- Agent 3 -->
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
+                                <div>
+                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Elena Rostova</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase">Mobile Escrow Specialist</p>
+                                    <div class="flex text-yellow-400 text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        <span class="text-gray-400 ml-2 font-medium">(1,890 closings)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> Los Angeles, CA Territory</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: BRAND NEW UNIQUE SECTION (Signing Agent Toolset & Field Verification Matrix) -->
+        <section class="py-24 bg-white dark:bg-secondary-800 border-t border-b border-gray-100 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-primary-600 font-semibold tracking-wide uppercase mb-2 block">Agent Infrastructure Standards</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-4">Signing Agent Equipment &amp; Field Audit Matrix</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Every agent in our network must maintain standardized mobile hardware and automated compliance integrations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Matrix Card 1 -->
+                    <div class="bg-gray-50 dark:bg-secondary-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-all shadow-md group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 rounded-2xl bg-primary-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-primary-600/30 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary-900 dark:text-white mb-3">Dual-Tray Printing</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Hardware audit requires high-speed dual-tray laser printers capable of auto-switching Letter &amp; Legal size loan packages without scaling errors.</p>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold uppercase text-primary-600 dark:text-primary-400"><i class="fa-solid fa-circle-check"></i> Standard Compliant</span>
+                    </div>
+
+                    <!-- Matrix Card 2 -->
+                    <div class="bg-gray-50 dark:bg-secondary-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-all shadow-md group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 rounded-2xl bg-primary-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-primary-600/30 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-scanner-gun"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary-900 dark:text-white mb-3">50+ PPM Scan-Backs</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Mobile scanners equipped with high-speed ADF ensure instant PDF upload of completed closing documents right from the signing location.</p>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold uppercase text-primary-600 dark:text-primary-400"><i class="fa-solid fa-circle-check"></i> Instant Dispatch API</span>
+                    </div>
+
+                    <!-- Matrix Card 3 -->
+                    <div class="bg-gray-50 dark:bg-secondary-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-all shadow-md group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 rounded-2xl bg-primary-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-primary-600/30 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary-900 dark:text-white mb-3">Biometric ID Verification</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Proprietary mobile notary security app verifies signer government IDs and logs tamper-evident GPS timestamping for every closing.</p>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold uppercase text-primary-600 dark:text-primary-400"><i class="fa-solid fa-circle-check"></i> Encrypted Audit Trail</span>
+                    </div>
+
+                    <!-- Matrix Card 4 -->
+                    <div class="bg-gray-50 dark:bg-secondary-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-all shadow-md group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-14 h-14 rounded-2xl bg-primary-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-primary-600/30 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-secondary-900 dark:text-white mb-3">$1M Active E&amp;O API</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Live API monitoring checks insurer databases daily to ensure active $1,000,000 errors &amp; omissions insurance policy standing.</p>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold uppercase text-primary-600 dark:text-primary-400"><i class="fa-solid fa-circle-check"></i> Live Policy Link</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Agent Verification Process -->
+        <section class="py-24 bg-gray-50 dark:bg-secondary-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2" data-aos="fade-right">
+                        <span class="text-primary-600 font-semibold tracking-wide uppercase mb-2 block">Strict Compliance Standard</span>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">How We Verify Signing Agents</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                            Title companies and lenders trust us because our verification standards exceed industry norms. Every agent in our network undergoes multi-layer vetting before taking their first signing.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-user-shield text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">Annual Background Screening</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Comprehensive national criminal, county, and motor vehicle background check performed annually.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-file-shield text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">$1,000,000 E&amp;O Insurance Policy</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Every agent carries active errors &amp; omissions insurance policies protecting title officers and lenders.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-print text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">Hardware &amp; Equipment Verification</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Dual-tray laser printer and high-speed mobile document scanner verification for flawless scan-backs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1000" alt="Agent Compliance Verification" class="w-full h-[500px] object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA Banner (Light mode light bg, text above buttons on 768px & 1024px, side-by-side in 1440px) -->
+        <section class="py-16 bg-primary-50 dark:bg-secondary-800 border-t border-b border-primary-100 dark:border-gray-800 relative overflow-hidden transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col xl:flex-row items-center xl:justify-between text-center xl:text-left gap-8" data-aos="zoom-in">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-secondary-900 dark:text-white mb-2">Are You a Certified Signing Agent?</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">Join our nationwide network or open a local mobile notary franchise.</p>
+                </div>
+                <div class="shrink-0 flex flex-col sm:flex-row items-center gap-4 w-full xl:w-auto">
+                    <a href="enquire.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center">
+                        Join Agent Network
+                    </a>
+                    <a href="contact.html" class="w-full sm:w-64 h-14 bg-white dark:bg-secondary-700 text-secondary-900 dark:text-white hover:bg-gray-100 dark:hover:bg-secondary-600 border border-gray-200 dark:border-gray-600 rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center">
+                        Contact Dispatch Desk
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="bg-gray-50 dark:bg-secondary-900 text-gray-800 dark:text-white pt-20 pb-10 border-t border-gray-200 dark:border-gray-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="space-y-6">
+                    <a href="../index.html" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-bold text-xl">
+                            <i class="fa-solid fa-stamp"></i>
+                        </div>
+                        <span class="font-heading font-bold text-2xl tracking-tight text-secondary-900 dark:text-white">Notary<span class="text-primary-500">Franchise</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Premier nationwide mobile notary & loan signing franchise network. Professional signing agent dispatch and turn-key business opportunities.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="home-2.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Home2</a></li>
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> About</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="agents.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Agents</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Contact</a></li>
+                        <li><a href="enquire.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Enquire</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Loan Signings</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Mobile General Notary</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Remote Online Notary</a></li>
+                        <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Title & Escrow Services</a></li>
+                        <li><a href="enquire.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Franchise Network</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">100 Corporate Parkway<br>Suite 500, Financial District</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary-500"></i>
+                            <a href="mailto:dispatch@notaryfranchise.com" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm">dispatch@notaryfranchise.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone-volume text-primary-500"></i>
+                            <a href="tel:18005550199" class="text-xl font-bold font-heading text-secondary-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">1-800-555-0199</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 NotaryFranchise Network. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Sitemap</a>
+                </div>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors text-sm flex items-center gap-2" aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+    </script>
+</body>
+</html>

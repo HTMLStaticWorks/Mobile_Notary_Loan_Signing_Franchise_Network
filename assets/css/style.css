@@ -1,0 +1,185 @@
+/* 
+ * AquaRestore Base Styles
+ */
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for horizontal scroll areas if needed */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Additional Custom Utilities */
+.glass-effect {
+    @apply bg-white/70 dark:bg-secondary-900/70 backdrop-blur-md;
+}
+
+.glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+}
+
+/* =====================================================
+   ALIGNMENT FIXES (A-F)
+   ===================================================== */
+
+/* ---- A) Icon + Heading + Description horizontal alignment ---- */
+/* Ensure icon boxes in feature rows don't shrink and text block aligns */
+.flex.gap-4 > div:first-child,
+.flex.gap-4 > .shrink-0 {
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+.flex.gap-4 > div:last-child {
+    min-width: 0;
+    flex: 1;
+}
+/* Consistent heading and description start alignment inside feature rows */
+.flex.gap-4 h4,
+.flex.gap-4 h3 {
+    margin-top: 0;
+}
+.flex.gap-4 p {
+    margin-bottom: 0;
+}
+
+/* ---- B) Table / Grid alignment for mobile, tablet, 1024p ---- */
+/* Align grid card content consistently */
+.grid > * {
+    display: flex;
+    flex-direction: column;
+}
+/* Ensure cards with icon + title + desc stack consistently */
+.grid [data-aos] h4,
+.grid [data-aos] h3,
+.grid [data-aos] p {
+    text-align: inherit;
+}
+/* Prevent column overflow on smaller screens */
+@media (max-width: 1024px) {
+    .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- C) Mobile & Tablet – List/checklist item alignment ---- */
+/* flex items-start/center list items: icon stays fixed, text wraps cleanly */
+ul li.flex,
+ul li[class*="flex"] {
+    align-items: flex-start;
+}
+ul li.flex i,
+ul li[class*="flex"] i {
+    flex-shrink: 0;
+    margin-top: 0.2em; /* optical vertical centering with first text line */
+    width: 1.25em;
+    text-align: center;
+}
+ul li.flex span,
+ul li[class*="flex"] span,
+ul li.flex div,
+ul li[class*="flex"] div {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+/* Wrapped text aligns with content start, not icon */
+ul li.flex > div > span,
+ul li[class*="flex"] > div > span {
+    display: block;
+}
+
+/* ---- D) Icon / heading / description row consistency ---- */
+/* Feature blocks: uniform spacing from icon to text columns */
+.space-y-6 > .flex,
+.space-y-4 > .flex {
+    align-items: flex-start;
+}
+.space-y-6 > .flex h4,
+.space-y-4 > .flex h4 {
+    margin-top: 0;
+    line-height: 1.4;
+}
+.space-y-6 > .flex p,
+.space-y-4 > .flex p {
+    margin-top: 0.25rem;
+    line-height: 1.6;
+}
+
+/* ---- E) Center-aligned numbered step cards ---- */
+/* Steps grid: consistent top/bottom spacing, centered icon + number + title */
+.grid [class*="text-center"] .text-4xl.font-heading {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.grid [class*="text-center"] h4 {
+    margin-bottom: 0.5rem;
+}
+.grid [class*="text-center"] p {
+    margin-bottom: 0;
+}
+/* Uniform vertical rhythm between numbered step cards */
+.grid > div[class*="text-center"] {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* ---- Tablet: Center last odd card in a 2-col grid ---- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid.md\:grid-cols-2 > *:last-child:nth-child(3),
+    .grid.md\:grid-cols-2 > *:last-child:nth-child(5),
+    .grid.md\:grid-cols-2 > *:last-child:nth-child(7) {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}

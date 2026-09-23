@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotaryFranchise | Mobile Notary & Loan Signing Franchise Network</title>
+    <meta name="description"
+        content="Nationwide Mobile Notary and Loan Signing Franchise Network. 24/7 certified signing agent dispatch, loan closing coordination, and franchise opportunities.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#1d4ed8',
+                            700: '#1e3a8a',
+                            800: '#1e40af',
+                            900: '#0f172a',
+                        },
+                        secondary: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body class="font-sans text-gray-800 bg-white dark:bg-secondary-900 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800"
+        id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <span
+                        class="font-heading font-bold text-2xl tracking-tight text-secondary-900 dark:text-white">Notary<span
+                            class="text-primary-600">Franchise</span></span>
+                </a>
+
+                <!-- Desktop Nav (1024px & 1440px) -->
+                <nav class="hidden lg:flex items-center gap-1.5 xl:gap-6 2xl:gap-8">
+                    <a href="index.html"
+                        class="bg-primary-50 dark:bg-primary-900/20 text-primary-600 px-2.5 py-2 xl:px-4 rounded-lg font-medium text-sm xl:text-base transition-colors">Home</a>
+                    <a href="pages/home-2.html"
+                        class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Home2</a>
+                    <a href="pages/about.html"
+                        class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">About</a>
+                    <a href="pages/services.html"
+                        class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Services</a>
+                    <a href="pages/agents.html"
+                        class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Agents</a>
+                    <a href="pages/contact.html"
+                        class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
+                </nav>
+
+                <!-- Right Actions (Desktop 1024px & 1440px) -->
+                <div class="hidden lg:flex items-center gap-2 xl:gap-4">
+                    <button id="themeToggle"
+                        class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm xl:text-base"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400 text-sm xl:text-base"></i>
+                    </button>
+                    <button id="rtlToggle"
+                        class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        aria-label="Toggle RTL/LTR" title="Switch to RTL">
+                        <i class="fa-solid fa-right-left text-sm xl:text-base"></i>
+                    </button>
+                    <!-- Enquire button AFTER RTL button for 1024px and 1440px -->
+                    <a href="pages/enquire.html"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-medium text-sm xl:text-base transition-all shadow-lg shadow-primary-600/30">Enquire</a>
+                </div>
+
+                <!-- Mobile Menu Button (<1024px) -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu (<1024px: 368px, 768px) -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden bg-white dark:bg-secondary-900 border-t border-gray-100 dark:border-gray-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-xl">
+                <a href="index.html"
+                    class="block px-3 py-3 text-primary-600 font-medium bg-primary-50 dark:bg-primary-900/20 rounded-lg">Home</a>
+                <a href="pages/home-2.html"
+                    class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home2</a>
+                <a href="pages/about.html"
+                    class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+                <a href="pages/services.html"
+                    class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+                <a href="pages/agents.html"
+                    class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Agents</a>
+                <a href="pages/contact.html"
+                    class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
+                <a href="pages/enquire.html"
+                    class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
+
+                <!-- Mobile Utility Row: Theme + RTL -->
+                <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
+                    <div class="flex items-center gap-3 px-3 pb-2">
+                        <button id="themeToggleMobile"
+                            class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1"
+                            aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon dark:hidden"></i>
+                            <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button id="rtlToggleMobile"
+                            class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1"
+                            aria-label="Toggle RTL/LTR">
+                            <i class="fa-solid fa-right-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=2000"
+                    alt="Loan Signing Document Execution" class="w-full h-full object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-secondary-900/95 via-secondary-900/85 to-secondary-900/40">
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col items-center text-center">
+                <div class="max-w-3xl flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 dark:bg-primary-900/80 text-primary-800 dark:text-primary-300 border border-primary-300 dark:border-primary-700 mb-6 backdrop-blur-md mx-auto shadow-md font-bold text-xs uppercase tracking-wide">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
+                        </span>
+                        <span class="font-bold text-xs tracking-wide uppercase text-primary-800 dark:text-primary-300">24/7 Nationwide Mobile Signing Dispatch</span>
+                    </div>
+
+                    <h1 class="text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
+                        Nationwide Mobile Notary & <br><span class="text-primary-500">Loan Signing Network.</span>
+                    </h1>
+
+                    <p class="text-xl text-gray-300 mb-10 max-w-xl mx-auto">
+                        Certified, background-checked, and E&O insured loan signing agents available on-demand across
+                        all 50 states for title companies, lenders, and individuals.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center w-full">
+                        <a href="pages/agents.html"
+                            class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-lg shadow-primary-600/30 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-user-check"></i> Find a Certified Agent
+                        </a>
+                        <a href="pages/enquire.html"
+                            class="w-full sm:w-64 h-14 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 rounded-xl font-semibold text-base transition-all flex items-center justify-center">
+                            Franchise Opportunities
+                        </a>
+                    </div>
+
+                    <!-- Separate Image Element for 368px / Mobile (kept after buttons) -->
+                    <div class="mt-8 w-full block md:hidden rounded-2xl overflow-hidden shadow-2xl border border-primary-500/30">
+                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800" alt="Loan Signing Document Execution" class="w-full h-52 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Rapid Dispatch & Signing Process -->
+        <section class="py-24 bg-gray-50 dark:bg-secondary-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-primary-600 font-semibold tracking-wide uppercase mb-2">How We Operate</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-secondary-900 dark:text-white">Our
+                        4-Step Signing Workflow</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">01</div>
+                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Request Signing</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Submit your loan package or notary request
+                            online or via our 24/7 signing desk.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">02</div>
+                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Agent Dispatched</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">We assign a certified, local mobile signing
+                            agent within minutes of your order.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-stamp"></i>
+                        </div>
+                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">03</div>
+                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Document Execution</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Agent meets signers on-location or via RON
+                            for flawless ID verification and signing.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div
+                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-box-archive"></i>
+                        </div>
+                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">04</div>
+                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Verification & Return</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Quality audit completed, scan-backs
+                            provided, and hard copies promptly shipped.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Services Grid -->
+        <section class="py-24 bg-white dark:bg-secondary-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-primary-600 font-semibold tracking-wide uppercase mb-2">Our Capabilities</h2>
+                    <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">
+                        Comprehensive Notary Solutions</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg">Delivering precision loan signings, mobile
+                        notarizations, and franchise growth nationwide.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <a href="pages/services.html"
+                        class="group block bg-gray-50 dark:bg-secondary-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000"
+                                alt="Mortgage Loan Signing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-secondary-900/40 group-hover:bg-secondary-900/20 transition-colors">
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-4 w-12 h-12 bg-white dark:bg-secondary-900 rounded-xl flex items-center justify-center text-primary-600 shadow-lg">
+                                <i class="fa-solid fa-house-chimney-crack text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4
+                                class="text-xl font-bold font-heading text-secondary-900 dark:text-white mb-2 group-hover:text-primary-600 transition-colors">
+                                Loan Signing Services</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Expert closing
+                                execution for Refinance, Purchase, HELOC, Reverse Mortgages, and Commercial Loans.</p>
+                            <span
+                                class="text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn
+                                more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Service 2 -->
+                    <a href="pages/services.html"
+                        class="group block bg-gray-50 dark:bg-secondary-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1000"
+                                alt="Mobile General Notary"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-secondary-900/40 group-hover:bg-secondary-900/20 transition-colors">
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-4 w-12 h-12 bg-white dark:bg-secondary-900 rounded-xl flex items-center justify-center text-primary-600 shadow-lg">
+                                <i class="fa-solid fa-car text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4
+                                class="text-xl font-bold font-heading text-secondary-900 dark:text-white mb-2 group-hover:text-primary-600 transition-colors">
+                                Mobile General Notary</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">On-demand mobile
+                                notarization for Power of Attorney, Wills, Trusts, Affidavits, and Corporate Documents.
+                            </p>
+                            <span
+                                class="text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn
+                                more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Service 3 -->
+                    <a href="pages/services.html"
+                        class="group block bg-gray-50 dark:bg-secondary-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000"
+                                alt="Remote Online Notarization"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-secondary-900/40 group-hover:bg-secondary-900/20 transition-colors">
+                            </div>
+                            <div
+                                class="absolute bottom-4 left-4 w-12 h-12 bg-white dark:bg-secondary-900 rounded-xl flex items-center justify-center text-primary-600 shadow-lg">
+                                <i class="fa-solid fa-laptop-code text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4
+                                class="text-xl font-bold font-heading text-secondary-900 dark:text-white mb-2 group-hover:text-primary-600 transition-colors">
+                                Remote Online Notary (RON)</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Secure digital
+                                notarization via encrypted audio-video technology from anywhere in the world.</p>
+                            <span
+                                class="text-primary-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn
+                                more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Why Choose Us -->
+        <section class="py-24 bg-gray-50 dark:bg-secondary-800 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2" data-aos="fade-right">
+                        <h2 class="text-primary-600 font-semibold tracking-wide uppercase mb-2">Why Partner With Us</h2>
+                        <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">
+                            Built for Title Companies, Lenders & Franchisees</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                            We solve the hassle of mobile signing scheduling. Our nationwide network ensures compliance,
+                            accuracy, and standardized professionalism at every closing table.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white dark:bg-secondary-900 text-primary-600 flex items-center justify-center shrink-0 shadow-sm border border-gray-100 dark:border-gray-700">
+                                    <i class="fa-solid fa-user-shield text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">Background Checked &
+                                        $1M E&O Insured</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Every agent undergoes annual
+                                        background screenings and carries comprehensive errors & omissions coverage.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white dark:bg-secondary-900 text-primary-600 flex items-center justify-center shrink-0 shadow-sm border border-gray-100 dark:border-gray-700">
+                                    <i class="fa-solid fa-map-location-dot text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">50-State Nationwide
+                                        Coverage</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Over 5,000 active signing agents
+                                        serving urban, suburban, and rural territories nationwide.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-white dark:bg-secondary-900 text-primary-600 flex items-center justify-center shrink-0 shadow-sm border border-gray-100 dark:border-gray-700">
+                                    <i class="fa-solid fa-building-flag text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary-900 dark:text-white mb-1">Franchise Ownership
+                                        System</h4>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Turnkey business model for
+                                        notary entrepreneurs to launch and scale a local mobile signing agency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1000"
+                                alt="Notary Signing Agent at Work" class="w-full h-[600px] object-cover">
+
+                            <!-- Trust Badge -->
+                            <div
+                                class="absolute bottom-8 left-8 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md p-6 rounded-2xl shadow-xl max-w-xs border border-white/20 dark:border-gray-700">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="flex -space-x-2">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white dark:border-secondary-900 overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                                                alt="Agent"></div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white dark:border-secondary-900 overflow-hidden">
+                                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100"
+                                                alt="Agent"></div>
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-primary-100 border-2 border-white dark:border-secondary-900 flex items-center justify-center text-xs font-bold text-primary-600">
+                                            5k+</div>
+                                    </div>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-bold text-secondary-900 dark:text-white">99.8% On-Time Execution
+                                </p>
+                                <p class="text-xs text-gray-500">250,000+ Signings Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Enterprise Case Highlight (Light Mode Light BG, Dark Mode Dark BG) -->
+        <section class="py-24 bg-gray-50 dark:bg-secondary-900 text-secondary-900 dark:text-white relative overflow-hidden transition-colors border-t border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-primary-600 dark:text-primary-400 font-semibold tracking-wide uppercase mb-2">Network Impact</h2>
+                    <h3 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">Enterprise Title &amp; Escrow Signing Case
+                    </h3>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-secondary-800 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl flex flex-col md:flex-row">
+                    <!-- Image Grid Side (Increased height in 1440px: xl:h-[460px] 2xl:h-[480px]) -->
+                    <div class="md:w-1/2 relative h-64 md:h-auto xl:h-[460px] 2xl:h-[480px] overflow-hidden" data-aos="fade-right">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+                            alt="Executive Real Estate Closing" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow">
+                            Verified Success</div>
+                    </div>
+
+                    <!-- Content Side -->
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center" data-aos="fade-left">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span
+                                class="bg-primary-50 dark:bg-gray-700 text-primary-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase">National
+                                Title Alliance</span>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm"><i class="fa-regular fa-clock"></i> 5,000+ Closings /
+                                Month</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold font-heading text-secondary-900 dark:text-white mb-4">The Challenge</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">A major multi-state title company faced high error rates and
+                            delayed scan-backs during peak end-of-month refinance rushes.</p>
+
+                        <h4 class="text-2xl font-bold font-heading text-secondary-900 dark:text-white mb-4">Our Network Solution</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8">Integrated our automated dispatch system and certified mobile
+                            notary network. Achieved 99.9% error-free signings and under 30-minute scan-back delivery.
+                        </p>
+
+                        <a href="pages/about.html"
+                            class="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-bold hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                            Explore franchise network story <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: CTA Banner (Light Mode Light BG, Text 1st full width, buttons next row in 768px & 1024px) -->
+        <section class="py-16 bg-primary-50 dark:bg-secondary-800 border-b border-gray-200 dark:border-gray-800 relative overflow-hidden transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center gap-6"
+                data-aos="zoom-in">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-3">Need a Signing Agent Today?</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg md:text-xl">Contact our dispatch desk or enquire about franchise
+                        ownership.</p>
+                </div>
+                <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-4 mt-2">
+                    <a href="pages/contact.html"
+                        class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone-volume"></i> Contact Signing Desk
+                    </a>
+                    <a href="pages/enquire.html"
+                        class="w-full sm:w-64 h-14 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-white hover:bg-gray-100 dark:hover:bg-secondary-700 rounded-xl font-bold text-base transition-all border border-gray-300 dark:border-gray-700 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer
+        class="bg-gray-50 dark:bg-secondary-900 text-gray-800 dark:text-white pt-20 pb-10 border-t border-gray-200 dark:border-gray-800 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-bold text-xl">
+                            <i class="fa-solid fa-stamp"></i>
+                        </div>
+                        <span
+                            class="font-heading font-bold text-2xl tracking-tight text-secondary-900 dark:text-white">Notary<span
+                                class="text-primary-600">Franchise</span></span>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Premier nationwide mobile notary & loan signing franchise network. Professional signing agent
+                        dispatch and turn-key business opportunities.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="pages/home-2.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Home2</a></li>
+                        <li><a href="pages/about.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> About</a></li>
+                        <li><a href="pages/services.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="pages/agents.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Agents</a></li>
+                        <li><a href="pages/contact.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Contact</a></li>
+                        <li><a href="pages/enquire.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Enquire</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Signing Solutions
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="pages/services.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Loan Signings</a></li>
+                        <li><a href="pages/services.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Mobile General Notary</a></li>
+                        <li><a href="pages/services.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Remote Online Notary</a></li>
+                        <li><a href="pages/services.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Title & Escrow Services</a></li>
+                        <li><a href="pages/enquire.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Franchise Network</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Nationwide Desk
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
+                            <span class="text-gray-600 dark:text-gray-400 text-sm">100 Corporate Parkway<br>Suite 500,
+                                Financial District</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary-500"></i>
+                            <a href="mailto:dispatch@notaryfranchise.com"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm">dispatch@notaryfranchise.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone-volume text-primary-500"></i>
+                            <a href="tel:18005550199"
+                                class="text-xl font-bold font-heading text-secondary-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">1-800-555-0199</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 NotaryFranchise Network. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="#"
+                        class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Terms of
+                        Service</a>
+                    <a href="#"
+                        class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Sitemap</a>
+                </div>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+                    class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors text-sm flex items-center gap-2"
+                    aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>

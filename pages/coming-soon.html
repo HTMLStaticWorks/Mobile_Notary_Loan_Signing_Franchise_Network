@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | NotaryFranchise</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#1d4ed8',
+                            700: '#1e3a8a',
+                            800: '#1e40af',
+                            900: '#0f172a',
+                        },
+                        secondary: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="font-sans text-gray-800 bg-secondary-900 text-white transition-colors duration-300 min-h-screen flex flex-col relative overflow-hidden">
+
+    <!-- Top Controls -->
+    <div class="absolute top-6 right-6 flex items-center gap-4 z-50">
+        <button id="rtlToggle" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md text-white shadow-md flex items-center justify-center hover:bg-white/20 transition-colors font-bold text-sm" aria-label="Toggle RTL">
+            RTL
+        </button>
+    </div>
+
+    <!-- Background (No Photo - Clean Gradient) -->
+    <div class="absolute inset-0 z-0 bg-gradient-to-br from-secondary-900 via-primary-900 to-secondary-900"></div>
+
+    <!-- Content -->
+    <main class="flex-1 flex flex-col items-center justify-center p-4 relative z-10 text-center">
+        <!-- Logo -->
+        <div class="mb-12">
+            <a href="../index.html" class="inline-flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-primary-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-primary-500/30">
+                    <i class="fa-solid fa-stamp"></i>
+                </div>
+                <span class="font-heading font-bold text-4xl tracking-tight text-white">Notary<span class="text-primary-500">Franchise</span></span>
+            </a>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6">Expanding Our Nationwide Network.</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mb-12">We are launching new regional notary franchise territories and enhanced title dispatch features shortly.</p>
+        
+        <!-- Countdown -->
+        <div class="flex items-center justify-center gap-4 sm:gap-6 mb-16">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 w-24 sm:w-32">
+                <div class="text-3xl sm:text-5xl font-heading font-bold text-primary-400 mb-1">12</div>
+                <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-400 font-medium">Days</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 w-24 sm:w-32">
+                <div class="text-3xl sm:text-5xl font-heading font-bold text-primary-400 mb-1">08</div>
+                <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-400 font-medium">Hours</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 w-24 sm:w-32">
+                <div class="text-3xl sm:text-5xl font-heading font-bold text-primary-400 mb-1">45</div>
+                <div class="text-xs sm:text-sm uppercase tracking-wider text-gray-400 font-medium">Mins</div>
+            </div>
+        </div>
+        
+        <div class="bg-primary-900/60 border border-primary-500/30 rounded-2xl p-6 backdrop-blur-md max-w-lg">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-headset text-primary-400"></i> Need Immediate Notary Dispatch?
+            </h3>
+            <p class="text-sm text-gray-300 mb-4">Our signing agent dispatch desk is operating 24/7 during platform upgrades.</p>
+            <a href="tel:18005550199" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg inline-flex items-center justify-center gap-2">
+                <i class="fa-solid fa-phone-volume"></i> Call 1-800-555-0199
+            </a>
+        </div>
+    </main>
+
+    <!-- Script for RTL Toggle -->
+    <script>
+        const rtlToggle = document.getElementById('rtlToggle');
+        if(rtlToggle) {
+            rtlToggle.addEventListener('click', () => {
+                const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+                document.documentElement.setAttribute('dir', isRtl ? 'ltr' : 'rtl');
+            });
+        }
+    </script>
+</body>
+</html>

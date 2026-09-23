@@ -1,0 +1,18 @@
+/* 
+ * AquaRestore Dark Mode 
+ * Note: Most dark mode styling is handled directly via Tailwind's 'dark:' utility classes.
+ * This file contains any necessary global overrides or specific component adjustments.
+ */
+
+.dark body {
+    color-scheme: dark;
+}
+
+/* Ensure autocomplete inputs look correct in dark mode */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover, 
+.dark input:-webkit-autofill:focus, 
+.dark input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0f172a inset !important;
+    -webkit-text-fill-color: white !important;
+}

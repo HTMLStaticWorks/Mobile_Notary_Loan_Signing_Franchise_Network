@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found | NotaryFranchise</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#1d4ed8',
+                            700: '#1e3a8a',
+                            800: '#1e40af',
+                            900: '#0f172a',
+                        },
+                        secondary: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 dark:bg-secondary-900 dark:text-gray-200 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-stamp"></i>
+                    </div>
+                    <span class="font-heading font-bold text-2xl tracking-tight text-secondary-900 dark:text-white">Notary<span class="text-primary-600">Franchise</span></span>
+                </a>
+
+                <!-- Desktop Nav (1024px & 1440px) -->
+                <nav class="hidden lg:flex items-center gap-1.5 xl:gap-6 2xl:gap-8">
+                    <a href="../index.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Home</a>
+                    <a href="home-2.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Home2</a>
+                    <a href="about.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">About</a>
+                    <a href="services.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Services</a>
+                    <a href="agents.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Agents</a>
+                    <a href="contact.html" class="px-2.5 py-2 xl:px-4 text-gray-600 dark:text-gray-300 font-medium text-sm xl:text-base transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
+                </nav>
+
+                <!-- Right Actions (Desktop 1024px & 1440px) -->
+                <div class="hidden lg:flex items-center gap-2 xl:gap-4">
+                    <button id="themeToggle" class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-sm xl:text-base"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-yellow-400 text-sm xl:text-base"></i>
+                    </button>
+                    <button id="rtlToggle" class="w-9 h-9 xl:w-10 xl:h-10 flex flex-shrink-0 items-center justify-center border-2 border-secondary-900 dark:border-white rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle RTL/LTR" title="Switch to RTL">
+                        <i class="fa-solid fa-right-left text-sm xl:text-base"></i>
+                    </button>
+                    <!-- Enquire button AFTER RTL button for 1024px and 1440px -->
+                    <a href="enquire.html" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 xl:px-6 xl:py-2.5 rounded-full font-medium text-sm xl:text-base transition-all shadow-lg shadow-primary-600/30">Enquire</a>
+                </div>
+
+                <!-- Mobile Menu Button (<1024px) -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-600 dark:text-gray-300">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu (<1024px: 368px, 768px) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-secondary-900 border-t border-gray-100 dark:border-gray-800 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-xl">
+                <a href="../index.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+                <a href="home-2.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Home2</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+                <a href="services.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+                <a href="agents.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Agents</a>
+                <a href="contact.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
+                <a href="enquire.html" class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
+
+                <!-- Mobile Utility Row: Theme + RTL -->
+                <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
+                    <div class="flex items-center gap-3 px-3 pb-2">
+                        <button id="themeToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-moon dark:hidden"></i>
+                            <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                        </button>
+                        <button id="rtlToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle RTL/LTR">
+                            <i class="fa-solid fa-right-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="flex-1 flex items-center justify-center pt-20 pb-12 relative overflow-hidden">
+        <div class="max-w-2xl mx-auto px-4 text-center relative z-10">
+            <div class="text-9xl font-heading font-bold text-primary-600 mb-4 opacity-80">
+                404
+            </div>
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">Page Not Found.</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-10">The document page you are looking for has been moved or does not exist. Return to our homepage to locate certified mobile signing agents.</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="../index.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+                <a href="contact.html" class="w-full sm:w-64 h-14 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-secondary-700 rounded-xl font-bold text-base transition-all shadow flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-headset"></i> Contact Dispatch
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
