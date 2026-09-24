@@ -137,24 +137,23 @@
                     class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Agents</a>
                 <a href="pages/contact.html"
                     class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
-                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
-                <a href="pages/enquire.html"
-                    class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
 
-                <!-- Mobile Utility Row: Theme + RTL -->
+                <!-- Mobile Utility Row: Theme + RTL + Enquire Button -->
                 <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
                     <div class="flex items-center gap-3 px-3 pb-2">
                         <button id="themeToggleMobile"
-                            class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                             aria-label="Toggle Theme">
                             <i class="fa-solid fa-moon dark:hidden"></i>
                             <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
                         </button>
                         <button id="rtlToggleMobile"
-                            class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                             aria-label="Toggle RTL/LTR">
                             <i class="fa-solid fa-right-left"></i>
                         </button>
+                        <a href="pages/enquire.html"
+                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-lg transition-colors shadow-sm">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -165,7 +164,7 @@
         <!-- Section 1: Hero Section -->
         <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=2000"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pDNan7I_82BYWQ53CR2L23-Oxfto1CaqHHrHZ7-xt6RcyMlXtNymxoo&s=10"
                     alt="Loan Signing Document Execution" class="w-full h-full object-cover">
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-secondary-900/95 via-secondary-900/85 to-secondary-900/40">
@@ -207,7 +206,7 @@
 
                     <!-- Separate Image Element for 368px / Mobile (kept after buttons) -->
                     <div class="mt-8 w-full block md:hidden rounded-2xl overflow-hidden shadow-2xl border border-primary-500/30">
-                        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800" alt="Loan Signing Document Execution" class="w-full h-52 object-cover">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pDNan7I_82BYWQ53CR2L23-Oxfto1CaqHHrHZ7-xt6RcyMlXtNymxoo&s=10" alt="Loan Signing Document Execution" class="w-full h-52 object-cover">
                     </div>
                 </div>
             </div>
@@ -224,55 +223,67 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                     <!-- Step 1 -->
-                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-5 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between"
                         data-aos="fade-up" data-aos-delay="100">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-file-signature"></i>
+                        <div>
+                            <div class="h-40 w-full rounded-xl overflow-hidden mb-5 relative shadow-md">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
+                                    alt="Request Signing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 w-10 h-10 bg-primary-600/90 text-white rounded-xl backdrop-blur-md flex items-center justify-center text-lg shadow-md">
+                                    <i class="fa-solid fa-file-signature"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Request Signing</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Submit your loan package or notary request online or via our 24/7 signing desk.</p>
                         </div>
-                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">01</div>
-                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Request Signing</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Submit your loan package or notary request
-                            online or via our 24/7 signing desk.</p>
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-5 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between"
                         data-aos="fade-up" data-aos-delay="200">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-user-gear"></i>
+                        <div>
+                            <div class="h-40 w-full rounded-xl overflow-hidden mb-5 relative shadow-md">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJxEjJV-SBPNa-Zb-aAQl-hE4zR9WE7XZkLd89cFXj8BaKVWtDsT4fSebB&s=10"
+                                    alt="Agent Dispatched" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 w-10 h-10 bg-primary-600/90 text-white rounded-xl backdrop-blur-md flex items-center justify-center text-lg shadow-md">
+                                    <i class="fa-solid fa-user-gear"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Agent Dispatched</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">We assign a certified, local mobile signing agent within minutes of your order.</p>
                         </div>
-                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">02</div>
-                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Agent Dispatched</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">We assign a certified, local mobile signing
-                            agent within minutes of your order.</p>
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-5 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between"
                         data-aos="fade-up" data-aos-delay="300">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-stamp"></i>
+                        <div>
+                            <div class="h-40 w-full rounded-xl overflow-hidden mb-5 relative shadow-md">
+                                <img src="https://i0.wp.com/www.sunshinesigning.com/wp-content/uploads/2024/01/pen-signing-service.jpg?fit=640%2C427&ssl=1"
+                                    alt="Document Execution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 w-10 h-10 bg-primary-600/90 text-white rounded-xl backdrop-blur-md flex items-center justify-center text-lg shadow-md">
+                                    <i class="fa-solid fa-stamp"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Document Execution</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Agent meets signers on-location or via RON for flawless ID verification and signing.</p>
                         </div>
-                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">03</div>
-                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Document Execution</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Agent meets signers on-location or via RON
-                            for flawless ID verification and signing.</p>
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300"
+                    <div class="relative z-10 bg-white dark:bg-secondary-900 rounded-2xl p-5 shadow-xl border border-gray-100 dark:border-gray-800 text-center group hover:-translate-y-2 transition-transform duration-300 flex flex-col justify-between"
                         data-aos="fade-up" data-aos-delay="400">
-                        <div
-                            class="w-16 h-16 mx-auto bg-primary-50 dark:bg-primary-900/30 text-primary-600 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-box-archive"></i>
+                        <div>
+                            <div class="h-40 w-full rounded-xl overflow-hidden mb-5 relative shadow-md">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9zvOQNKW2EtfOqjodYKcYwGN7YIaJWSmiVAZ-m2hIo74NKMmLpDXvgxs&s=10"
+                                    alt="Verification & Return" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 w-10 h-10 bg-primary-600/90 text-white rounded-xl backdrop-blur-md flex items-center justify-center text-lg shadow-md">
+                                    <i class="fa-solid fa-box-archive"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Verification & Return</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Quality audit completed, scan-backs provided, and hard copies promptly shipped.</p>
                         </div>
-                        <div class="text-4xl font-heading font-bold text-gray-400 dark:text-gray-500 mb-2">04</div>
-                        <h4 class="text-xl font-bold text-secondary-900 dark:text-white mb-2">Verification & Return</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Quality audit completed, scan-backs
-                            provided, and hard copies promptly shipped.</p>
                     </div>
                 </div>
             </div>
@@ -352,7 +363,7 @@
                         class="group block bg-gray-50 dark:bg-secondary-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
                         data-aos="fade-up" data-aos-delay="300">
                         <div class="h-48 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAp1QuPCE5XXmjhPMHL3GjIzcMxAmshDzdNmFnl1adS4NsaoF9ipOG6p4&s=10"
                                 alt="Remote Online Notarization"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div
@@ -433,12 +444,12 @@
 
                     <div class="lg:w-1/2 w-full" data-aos="fade-left">
                         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1000"
+                            <img src="https://signaturemobileservices.com/wp-content/themes/yootheme/cache/MobileNotary_NotaryNetwork-e45baa78.jpeg"
                                 alt="Notary Signing Agent at Work" class="w-full h-[600px] object-cover">
 
                             <!-- Trust Badge -->
                             <div
-                                class="absolute bottom-8 left-8 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md p-6 rounded-2xl shadow-xl max-w-xs border border-white/20 dark:border-gray-700">
+                                class="absolute bottom-8 left-8 bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md p-1 rounded-2xl shadow-xl max-w-xs border border-white/20 dark:border-gray-700">
                                 <div class="flex items-center gap-4 mb-3">
                                     <div class="flex -space-x-2">
                                         <div
@@ -461,7 +472,6 @@
                                 </div>
                                 <p class="text-sm font-bold text-secondary-900 dark:text-white">99.8% On-Time Execution
                                 </p>
-                                <p class="text-xs text-gray-500">250,000+ Signings Completed</p>
                             </div>
                         </div>
                     </div>
@@ -482,7 +492,7 @@
                     class="bg-white dark:bg-secondary-800 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-2xl flex flex-col md:flex-row">
                     <!-- Image Grid Side (Increased height in 1440px: xl:h-[460px] 2xl:h-[480px]) -->
                     <div class="md:w-1/2 relative h-64 md:h-auto xl:h-[460px] 2xl:h-[480px] overflow-hidden" data-aos="fade-right">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+                        <img src="https://myrapidnotary.com/wp-content/uploads/2025/05/Estate-Planning.webp"
                             alt="Executive Real Estate Closing" class="w-full h-full object-cover">
                         <div
                             class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow">
@@ -562,17 +572,17 @@
                     </p>
                     <div class="flex items-center gap-4">
                         <a href="#"
-                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon"
                             aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon"
                             aria-label="Twitter">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors"
+                            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon"
                             aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
@@ -669,10 +679,7 @@
                         class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Sitemap</a>
                 </div>
                 <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
-                    class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors text-sm flex items-center gap-2"
-                    aria-label="Back to Top">
-                    <i class="fa-solid fa-arrow-up"></i>
-                </a>
+                    </a>
             </div>
         </div>
     </footer>

@@ -154,4 +154,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateNavLinks(desktopNavLinks, false);
     updateNavLinks(mobileNavLinks, true);
+
+    // Floating Back to Top button functionality
+    let backToTopBtn = document.getElementById('backToTopBtn');
+    if (!backToTopBtn) {
+        backToTopBtn = document.createElement('button');
+        backToTopBtn.id = 'backToTopBtn';
+        backToTopBtn.className = 'fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white shadow-xl dark:bg-primary-600 dark:hover:bg-primary-500 border border-white/20 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center group';
+        backToTopBtn.setAttribute('aria-label', 'Back to Top');
+        backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up text-lg group-hover:-translate-y-0.5 transition-transform"></i>';
+        document.body.appendChild(backToTopBtn);
+    }
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        } else {
+            backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
+

@@ -16,3 +16,15 @@
     -webkit-box-shadow: 0 0 0 30px #0f172a inset !important;
     -webkit-text-fill-color: white !important;
 }
+
+/* Footer hover fixes for dark mode */
+.dark footer a:hover {
+    color: #60a5fa !important;
+}
+
+.dark footer .social-icon:hover,
+.dark footer a.social-link:hover {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+

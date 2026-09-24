@@ -109,19 +109,23 @@
                 <a href="services.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
                 <a href="agents.html" class="block px-3 py-3 text-primary-600 font-medium bg-primary-50 dark:bg-primary-900/20 rounded-lg">Agents</a>
                 <a href="contact.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
-                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
-                <a href="enquire.html" class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
 
-                <!-- Mobile Utility Row: Theme + RTL -->
+                <!-- Mobile Utility Row: Theme + RTL + Enquire Button -->
                 <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
                     <div class="flex items-center gap-3 px-3 pb-2">
-                        <button id="themeToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle Theme">
+                        <button id="themeToggleMobile"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            aria-label="Toggle Theme">
                             <i class="fa-solid fa-moon dark:hidden"></i>
                             <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
                         </button>
-                        <button id="rtlToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle RTL/LTR">
+                        <button id="rtlToggleMobile"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            aria-label="Toggle RTL/LTR">
                             <i class="fa-solid fa-right-left"></i>
                         </button>
+                        <a href="enquire.html"
+                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-lg transition-colors shadow-sm">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -189,71 +193,71 @@
                     <p class="text-gray-600 dark:text-gray-400">All network agents pass rigorous background checks and carry active E&amp;O policies.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     <!-- Agent 1 -->
-                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-5 sm:p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                         <div>
                             <div class="flex items-center gap-4 mb-4">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
-                                <div>
-                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Rebecca Miller</h4>
-                                    <p class="text-xs text-primary-600 font-semibold uppercase">Senior Loan Signing Agent</p>
-                                    <div class="flex text-yellow-400 text-xs mt-1">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                        <span class="text-gray-400 ml-2 font-medium">(1,240 closings)</span>
+                                <img src="https://t4.ftcdn.net/jpg/06/34/40/29/360_F_634402929_VRJigMsN8Zv0xEhEErGtxMdmGrQtBuz8.jpg" alt="Agent Photo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-primary-600 shrink-0">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="font-bold text-base sm:text-lg text-secondary-900 dark:text-white truncate">Rebecca Miller</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase truncate">Senior Loan Signing Agent</p>
+                                    <div class="flex flex-wrap items-center gap-1 text-yellow-400 text-xs mt-1">
+                                        <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-gray-400 font-medium">(1,240 closings)</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> New York, NY &amp; Metro Area</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600 shrink-0"></i> <span class="truncate">New York, NY &amp; Metro Area</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500 shrink-0"></i> <span class="truncate">NCSA Background Checked</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600 shrink-0"></i> <span class="truncate">$1,000,000 E&amp;O Insured</span></p>
                             </div>
                         </div>
                         <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
                     </div>
 
                     <!-- Agent 2 -->
-                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-5 sm:p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                         <div>
                             <div class="flex items-center gap-4 mb-4">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
-                                <div>
-                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Marcus Vance</h4>
-                                    <p class="text-xs text-primary-600 font-semibold uppercase">Certified RON Specialist</p>
-                                    <div class="flex text-yellow-400 text-xs mt-1">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                        <span class="text-gray-400 ml-2 font-medium">(2,150 closings)</span>
+                                <img src="https://img.magnific.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129417.jpg?semt=ais_hybrid&w=740&q=80" alt="Agent Photo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-primary-600 shrink-0">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="font-bold text-base sm:text-lg text-secondary-900 dark:text-white truncate">Marcus Vance</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase truncate">Certified RON Specialist</p>
+                                    <div class="flex flex-wrap items-center gap-1 text-yellow-400 text-xs mt-1">
+                                        <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-gray-400 font-medium">(2,150 closings)</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> Dallas, TX &amp; Remote (RON)</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600 shrink-0"></i> <span class="truncate">Dallas, TX &amp; Remote (RON)</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500 shrink-0"></i> <span class="truncate">NCSA Background Checked</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600 shrink-0"></i> <span class="truncate">$1,000,000 E&amp;O Insured</span></p>
                             </div>
                         </div>
                         <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
                     </div>
 
                     <!-- Agent 3 -->
-                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white dark:bg-secondary-800 rounded-3xl p-5 sm:p-6 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                         <div>
                             <div class="flex items-center gap-4 mb-4">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Agent Photo" class="w-16 h-16 rounded-full object-cover border-2 border-primary-600">
-                                <div>
-                                    <h4 class="font-bold text-lg text-secondary-900 dark:text-white">Elena Rostova</h4>
-                                    <p class="text-xs text-primary-600 font-semibold uppercase">Mobile Escrow Specialist</p>
-                                    <div class="flex text-yellow-400 text-xs mt-1">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                        <span class="text-gray-400 ml-2 font-medium">(1,890 closings)</span>
+                                <img src="https://media.istockphoto.com/id/1413765605/photo/portrait-of-successful-african-american-business-woman.jpg?s=612x612&w=0&k=20&c=7SssKFIuj7EYG_c2A0ZIJUqZpd3hmjQW8P_TMF1WJ5I=" alt="Agent Photo" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-primary-600 shrink-0">
+                                <div class="min-w-0 flex-1">
+                                    <h4 class="font-bold text-base sm:text-lg text-secondary-900 dark:text-white truncate">Elena Rostova</h4>
+                                    <p class="text-xs text-primary-600 font-semibold uppercase truncate">Mobile Escrow Specialist</p>
+                                    <div class="flex flex-wrap items-center gap-1 text-yellow-400 text-xs mt-1">
+                                        <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-gray-400 font-medium">(1,890 closings)</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="space-y-2 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mb-6">
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600"></i> Los Angeles, CA Territory</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500"></i> NCSA Background Checked</p>
-                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600"></i> $1,000,000 E&amp;O Insured</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-600 shrink-0"></i> <span class="truncate">Los Angeles, CA Territory</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-green-500 shrink-0"></i> <span class="truncate">NCSA Background Checked</span></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-file-contract text-primary-600 shrink-0"></i> <span class="truncate">$1,000,000 E&amp;O Insured</span></p>
                             </div>
                         </div>
                         <a href="contact.html" class="w-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 hover:bg-primary-600 hover:text-white font-bold py-3 rounded-xl transition-colors text-center text-sm">Assign Agent</a>
@@ -285,7 +289,7 @@
                     <!-- Matrix Card 2 -->
                     <div class="bg-gray-50 dark:bg-secondary-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-700 hover:border-primary-500 transition-all shadow-md group" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-14 h-14 rounded-2xl bg-primary-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-primary-600/30 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-scanner-gun"></i>
+                            <i class="fa-solid fa-file-arrow-up"></i>
                         </div>
                         <h3 class="text-xl font-heading font-bold text-secondary-900 dark:text-white mb-3">50+ PPM Scan-Backs</h3>
                         <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">Mobile scanners equipped with high-speed ADF ensure instant PDF upload of completed closing documents right from the signing location.</p>
@@ -359,7 +363,7 @@
                     
                     <div class="lg:w-1/2 w-full" data-aos="fade-left">
                         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1000" alt="Agent Compliance Verification" class="w-full h-[500px] object-cover">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv_kOl_XzV8LHq1XE4kHcrRXYGGUQ4OcvYSoMVvcI-VRfYwdtxwOTMc8pS&s=10" alt="Agent Compliance Verification" class="w-full h-[500px] object-cover">
                         </div>
                     </div>
                 </div>
@@ -373,7 +377,7 @@
                     <h2 class="text-3xl md:text-4xl font-heading font-bold text-secondary-900 dark:text-white mb-2">Are You a Certified Signing Agent?</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-lg">Join our nationwide network or open a local mobile notary franchise.</p>
                 </div>
-                <div class="shrink-0 flex flex-col sm:flex-row items-center gap-4 w-full xl:w-auto">
+                <div class="shrink-0 flex flex-col sm:flex-row items-center justify-center gap-4 w-full xl:w-auto">
                     <a href="enquire.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center">
                         Join Agent Network
                     </a>
@@ -402,13 +406,13 @@
                         Premier nationwide mobile notary & loan signing franchise network. Professional signing agent dispatch and turn-key business opportunities.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Twitter">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="Twitter">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -430,7 +434,7 @@
 
                 <!-- Services -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Services</h4>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Signing Solutions</h4>
                     <ul class="space-y-3">
                         <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Loan Signings</a></li>
                         <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Mobile General Notary</a></li>
@@ -442,7 +446,7 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Contact Info</h4>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Nationwide Desk</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
@@ -468,8 +472,7 @@
                     <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Sitemap</a>
                 </div>
-                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors text-sm flex items-center gap-2" aria-label="Back to Top">
-                    <i class="fa-solid fa-arrow-up"></i>
+              
                 </a>
             </div>
         </div>

@@ -109,19 +109,23 @@
                 <a href="services.html" class="block px-3 py-3 text-primary-600 font-medium bg-primary-50 dark:bg-primary-900/20 rounded-lg">Services</a>
                 <a href="agents.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Agents</a>
                 <a href="contact.html" class="block px-3 py-3 text-gray-600 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
-                <!-- Enquire button inside mobile menu AFTER contact menu for 368px & 768px -->
-                <a href="enquire.html" class="block px-3 py-3 text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg transition-colors">Enquire</a>
 
-                <!-- Mobile Utility Row: Theme + RTL -->
+                <!-- Mobile Utility Row: Theme + RTL + Enquire Button -->
                 <div class="border-t border-gray-100 dark:border-gray-800 mt-2 pt-3">
                     <div class="flex items-center gap-3 px-3 pb-2">
-                        <button id="themeToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle Theme">
+                        <button id="themeToggleMobile"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            aria-label="Toggle Theme">
                             <i class="fa-solid fa-moon dark:hidden"></i>
                             <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
                         </button>
-                        <button id="rtlToggleMobile" class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex-1" aria-label="Toggle RTL/LTR">
+                        <button id="rtlToggleMobile"
+                            class="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            aria-label="Toggle RTL/LTR">
                             <i class="fa-solid fa-right-left"></i>
                         </button>
+                        <a href="enquire.html"
+                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-lg transition-colors shadow-sm">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +179,7 @@
                     
                     <div class="lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
                         <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[400px]">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800" alt="Loan Signing Execution" class="w-full h-full object-cover">
+                            <img src="https://img-c.udemycdn.com/course/480x270/4448768_2d63.jpg" alt="Loan Signing Execution" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -188,7 +192,7 @@
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="lg:w-1/2" data-aos="fade-right">
                         <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[400px]">
-                            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800" alt="Mobile General Notary Service" class="w-full h-full object-cover">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHuShvHBXSVTofR4lQHsxIGdMICJfB6j6SNzM4oK-HZFwnd46Kkq0fS0C4&s=10" alt="Mobile General Notary Service" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -202,20 +206,32 @@
                         </p>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="bg-white dark:bg-secondary-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-                                <h4 class="font-bold text-secondary-900 dark:text-white mb-1"><i class="fa-solid fa-file-contract text-primary-600 mr-2"></i> Power of Attorney</h4>
+                            <div class="bg-white dark:bg-secondary-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-start gap-2">
+                                <div class="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center text-lg mb-1">
+                                    <i class="fa-solid fa-file-contract"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary-900 dark:text-white text-base">Power of Attorney</h4>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Financial and medical POA document notarization.</p>
                             </div>
-                            <div class="bg-white dark:bg-secondary-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-                                <h4 class="font-bold text-secondary-900 dark:text-white mb-1"><i class="fa-solid fa-gavel text-primary-600 mr-2"></i> Legal Affidavits</h4>
+                            <div class="bg-white dark:bg-secondary-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-start gap-2">
+                                <div class="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center text-lg mb-1">
+                                    <i class="fa-solid fa-gavel"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary-900 dark:text-white text-base">Legal Affidavits</h4>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Sworn statements, oaths, and court affidavits.</p>
                             </div>
-                            <div class="bg-white dark:bg-secondary-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-                                <h4 class="font-bold text-secondary-900 dark:text-white mb-1"><i class="fa-solid fa-scroll text-primary-600 mr-2"></i> Trusts &amp; Wills</h4>
+                            <div class="bg-white dark:bg-secondary-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-start gap-2">
+                                <div class="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center text-lg mb-1">
+                                    <i class="fa-solid fa-scroll"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary-900 dark:text-white text-base">Trusts &amp; Wills</h4>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Living trusts, estate planning, and testament signings.</p>
                             </div>
-                            <div class="bg-white dark:bg-secondary-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-                                <h4 class="font-bold text-secondary-900 dark:text-white mb-1"><i class="fa-solid fa-building text-primary-600 mr-2"></i> Corporate Docs</h4>
+                            <div class="bg-white dark:bg-secondary-800 p-5 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-start gap-2">
+                                <div class="w-10 h-10 rounded-lg bg-primary-50 dark:bg-primary-900/30 text-primary-600 flex items-center justify-center text-lg mb-1">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <h4 class="font-bold text-secondary-900 dark:text-white text-base">Corporate Docs</h4>
                                 <p class="text-sm text-gray-500 dark:text-gray-400">Commercial agreements, bill of sale, and NDA seals.</p>
                             </div>
                         </div>
@@ -306,13 +322,13 @@
                         Premier nationwide mobile notary & loan signing franchise network. Professional signing agent dispatch and turn-key business opportunities.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="Twitter">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="Twitter">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-secondary-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors social-icon" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -334,7 +350,7 @@
 
                 <!-- Services -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Services</h4>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Signing Solutions</h4>
                     <ul class="space-y-3">
                         <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Loan Signings</a></li>
                         <li><a href="services.html" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> Mobile General Notary</a></li>
@@ -346,7 +362,7 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Contact Info</h4>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-secondary-900 dark:text-white">Nationwide Desk</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
@@ -372,9 +388,7 @@
                     <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Terms of Service</a>
                     <a href="#" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors">Sitemap</a>
                 </div>
-                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-gray-500 hover:text-secondary-900 dark:hover:text-white transition-colors text-sm flex items-center gap-2" aria-label="Back to Top">
-                    <i class="fa-solid fa-arrow-up"></i>
-                </a>
+                 </a>
             </div>
         </div>
     </footer>
