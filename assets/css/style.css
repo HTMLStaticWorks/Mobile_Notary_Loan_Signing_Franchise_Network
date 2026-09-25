@@ -87,6 +87,15 @@ html {
     display: flex;
     flex-direction: column;
 }
+/* Ensure search button inside grid aligns to bottom with input and dropdowns */
+.grid > .agent-search-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.agent-search-btn {
+    height: 50px;
+}
 /* Ensure cards with icon + title + desc stack consistently */
 .grid [data-aos] h4,
 .grid [data-aos] h3,
