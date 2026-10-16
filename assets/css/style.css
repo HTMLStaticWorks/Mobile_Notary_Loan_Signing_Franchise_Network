@@ -95,6 +95,14 @@ html {
 }
 .agent-search-btn {
     height: 50px;
+    border-radius: 9999px !important;
+}
+
+/* Ensure consistent curved radius for all action buttons */
+button.rounded-full,
+a.rounded-full,
+.rounded-full {
+    border-radius: 9999px;
 }
 /* Ensure cards with icon + title + desc stack consistently */
 .grid [data-aos] h4,
@@ -186,6 +194,41 @@ ul li[class*="flex"] > div > span {
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+    }
+}
+
+/* ---- How the Agent Network Works Grid: 3*2 at 1024px+ with centered row 2 and equal dimensions ---- */
+@media (min-width: 1024px) {
+    .network-process-grid {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+    .network-process-grid > .network-step-card {
+        grid-column: span 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    /* Row 1: Cards 1, 2, 3 take 2 columns each (cols 1-2, 3-4, 5-6) */
+    .network-process-grid > .network-step-card:nth-child(1) {
+        grid-column: 1 / span 2 !important;
+    }
+    .network-process-grid > .network-step-card:nth-child(2) {
+        grid-column: 3 / span 2 !important;
+    }
+    .network-process-grid > .network-step-card:nth-child(3) {
+        grid-column: 5 / span 2 !important;
+    }
+    /* Row 2: Cards 4 and 5 centered with equal width to Card 1 (cols 2-3 and 4-5) */
+    .network-process-grid > .network-step-card:nth-child(4) {
+        grid-column: 2 / span 2 !important;
+    }
+    .network-process-grid > .network-step-card:nth-child(5) {
+        grid-column: 4 / span 2 !important;
     }
 }
 

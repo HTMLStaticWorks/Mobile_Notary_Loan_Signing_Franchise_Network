@@ -128,7 +128,7 @@
                             <i class="fa-solid fa-right-left"></i>
                         </button>
                         <a href="enquire.html"
-                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-lg transition-colors shadow-sm">Enquire</a>
+                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-full transition-colors shadow-sm">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -136,38 +136,108 @@
     </header>
 
     <main>
-        <!-- Section 1: Hero Section (Reduced height on 1024px & separate image placed AFTER buttons) -->
-        <section class="pt-28 pb-12 lg:pt-32 lg:pb-16 bg-gray-50 dark:bg-secondary-900 border-b border-gray-100 dark:border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Text Content & Buttons Block -->
-                <div class="text-center max-w-4xl mx-auto" data-aos="fade-up">
-                    <div class="mb-6">
-                        <span class="bg-secondary-900 text-white dark:bg-white dark:text-secondary-900 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest inline-flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span> Nationwide Dispatch Network
-                        </span>
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-secondary-900 dark:text-white mb-5 leading-tight">
-                        Certified Signing Agents. <span class="text-primary-600">On Demand.</span>
-                    </h1>
-                    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                        Seamless mobile notary dispatch, standardized compliance, and turnkey franchise business opportunities across all 50 states.
-                    </p>
+        <!-- Section 1: Hero Section (Distinct 2-Column Split Presentation, Matching Home 1 min-h-[90vh] Height) -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-gradient-to-br from-gray-50 via-primary-50/25 to-white dark:from-secondary-900 dark:via-secondary-900/95 dark:to-secondary-800 border-b border-gray-100 dark:border-gray-800">
+            <!-- Subtle decorative ambient elements -->
+            <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                    <!-- Equal button length & height pair -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                        <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-phone"></i> Contact Dispatch
-                        </a>
-                        <a href="enquire.html" class="w-full sm:w-64 h-14 bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 hover:bg-secondary-800 rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> Franchise Enquiry
-                        </a>
-                    </div>
-                </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left Column: Content & Action Block -->
+                    <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left" data-aos="fade-right" data-aos-duration="900">
+                        <!-- Live Dispatch Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white dark:bg-secondary-800 text-secondary-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 shadow-md mb-6">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-600"></span>
+                            </span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-secondary-900 dark:text-white">Nationwide Certified Dispatch Network</span>
+                        </div>
 
-                <!-- Separate Hero Image Container positioned AFTER the buttons for 1024px & all viewports -->
-                <div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://bumbaughgeorge.com/wp-content/uploads/2025/06/Can-Your-Attorney-Also-Be-Your-Notary-Understanding-the-Rules.png"
-                        alt="Notary signing agent reviewing closing documents" class="w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover">
+                        <!-- Distinct Title -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-secondary-900 dark:text-white mb-6 leading-[1.15] tracking-tight">
+                            Precision Loan Signings.<br>
+                            <span class="text-primary-600 dark:text-primary-400">On-Demand Across All 50 States.</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl leading-relaxed">
+                            Connecting title companies, commercial lenders, and franchise owners with background-screened, $1M E&amp;O insured signing agents within minutes.
+                        </p>
+
+                        <!-- Key Highlights Quick Matrix -->
+                        <div class="grid grid-cols-2 gap-3 mb-10 w-full max-w-lg text-left">
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-secondary-900 dark:text-gray-200">
+                                <div class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/60 text-primary-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></div>
+                                <span>3,143 US Counties Covered</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-secondary-900 dark:text-gray-200">
+                                <div class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/60 text-primary-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></div>
+                                <span>$1,000,000 E&amp;O Insured</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-secondary-900 dark:text-gray-200">
+                                <div class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/60 text-primary-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></div>
+                                <span>Dual-Tray Laser Printing</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-secondary-900 dark:text-gray-200">
+                                <div class="w-6 h-6 rounded-full bg-primary-100 dark:bg-primary-900/60 text-primary-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></div>
+                                <span>50+ PPM Table Scan-Backs</span>
+                            </div>
+                        </div>
+
+                        <!-- Equal Curved Button Pair -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
+                            <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold text-base transition-all shadow-lg shadow-primary-600/30 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone"></i> Contact Dispatch
+                            </a>
+                            <a href="enquire.html" class="w-full sm:w-64 h-14 bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 hover:bg-secondary-800 rounded-full font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Franchise Enquiry
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Visual Showcase (and separate image for 368px & 768px) -->
+                    <div class="lg:col-span-5 w-full mt-4 lg:mt-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="relative w-full max-w-lg mx-auto">
+                            <!-- Glow Backdrop -->
+                            <div class="absolute -inset-3 bg-gradient-to-r from-primary-600/20 to-blue-500/20 rounded-3xl blur-2xl -z-10 opacity-70"></div>
+
+                            <!-- Main Framed Image Container -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white dark:border-gray-700 bg-white dark:bg-secondary-800">
+                                <img src="https://bumbaughgeorge.com/wp-content/uploads/2025/06/Can-Your-Attorney-Also-Be-Your-Notary-Understanding-the-Rules.png"
+                                    alt="Certified Signing Agent Reviewing Loan Documents" class="w-full h-[280px] sm:h-[380px] lg:h-[440px] object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-secondary-900/80 via-transparent to-transparent"></div>
+
+                                <!-- Floating Live Status Pill -->
+                                <div class="absolute top-4 right-4 bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg border border-gray-200/60 dark:border-gray-700 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                                    <span class="text-xs font-bold text-secondary-900 dark:text-white">Active Dispatch • 50 States</span>
+                                </div>
+
+                                <!-- Floating Bottom Zero-Delay Card -->
+                                <div class="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl border border-gray-200/60 dark:border-gray-700 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-primary-600 text-white flex items-center justify-center text-lg shadow-md shrink-0">
+                                            <i class="fa-solid fa-stamp"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-[11px] text-primary-600 dark:text-primary-400 font-bold uppercase tracking-wide">Closing Standard</p>
+                                            <p class="text-xs sm:text-sm font-extrabold text-secondary-900 dark:text-white">Zero Escrow Delays</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end shrink-0">
+                                        <div class="flex text-yellow-400 text-xs">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="text-[11px] text-gray-500 dark:text-gray-400 font-semibold">99.8% Accuracy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -187,7 +257,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">Mortgage Refinance</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Fast execution of refinance loan packages with prompt scan-backs.</p>
                         </div>
                     </div>
 
@@ -197,7 +266,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">Buyer & Seller Closings</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Professional on-site closing support for buyers, sellers, and agents.</p>
                         </div>
                     </div>
 
@@ -207,7 +275,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">HELOC & Second Mortgages</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Specialized handling of Home Equity Lines of Credit with compliance checks.</p>
                         </div>
                     </div>
 
@@ -217,7 +284,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">Commercial Loans</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">High-value commercial property loan signings executed by senior signing agents.</p>
                         </div>
                     </div>
 
@@ -227,7 +293,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">Power of Attorney & Estate</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Accurate mobile notarization for trusts, wills, and POA documents.</p>
                         </div>
                     </div>
 
@@ -237,7 +302,6 @@
                         <div class="absolute inset-0 bg-secondary-900/60 group-hover:bg-secondary-900/40 transition-colors"></div>
                         <div class="absolute inset-0 p-6 flex flex-col justify-end">
                             <h3 class="text-xl font-bold font-heading text-white mb-1">Remote Online Notarization</h3>
-                            <p class="text-gray-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Encrypted e-notarization via webcam with KBA identity verification.</p>
                         </div>
                     </div>
                 </div>
@@ -417,7 +481,7 @@
                             </div>
                         </div>
 
-                        <a href="enquire.html" class="bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 px-8 py-4 rounded-xl font-bold inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
+                        <a href="enquire.html" class="bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
                             Enquire About Franchising <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -433,10 +497,10 @@
 
                 <!-- Identical button width and height -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center gap-2">
+                    <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold text-base transition-all shadow-xl flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone-volume"></i> Contact Dispatch Desk
                     </a>
-                    <a href="enquire.html" class="w-full sm:w-64 h-14 bg-white dark:bg-secondary-700 text-secondary-900 dark:text-white hover:bg-gray-100 dark:hover:bg-secondary-600 border border-gray-200 dark:border-gray-600 rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center gap-2">
+                    <a href="enquire.html" class="w-full sm:w-64 h-14 bg-white dark:bg-secondary-700 text-secondary-900 dark:text-white hover:bg-gray-100 dark:hover:bg-secondary-600 border border-gray-200 dark:border-gray-600 rounded-full font-bold text-base transition-all shadow-xl flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
                     </a>
                 </div>

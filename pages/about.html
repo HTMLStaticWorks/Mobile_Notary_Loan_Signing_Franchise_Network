@@ -125,7 +125,7 @@
                             <i class="fa-solid fa-right-left"></i>
                         </button>
                         <a href="enquire.html"
-                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-lg transition-colors shadow-sm">Enquire</a>
+                            class="flex-1 py-2.5 px-4 text-center text-white bg-primary-600 hover:bg-primary-700 font-bold rounded-full transition-colors shadow-sm">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -133,13 +133,39 @@
     </header>
 
     <main>
-        <!-- Section 1: Hero Section (NO background photo as requested) -->
-        <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 bg-gradient-to-br from-gray-50 via-primary-50/40 to-white dark:from-secondary-900 dark:via-secondary-800 dark:to-secondary-900 border-b border-gray-100 dark:border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
-                <div class="max-w-3xl mx-auto">
-                    <span class="text-primary-600 font-bold tracking-widest uppercase text-xs mb-3 block">Corporate Profile</span>
-                    <h1 class="text-4xl md:text-6xl font-heading font-bold text-secondary-900 dark:text-white mb-6">Transforming Loan Signings, <span class="text-primary-600">Empowering Franchisees.</span></h1>
-                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">We are America's premier mobile notary and loan signing franchise network, delivering standardized excellence to title companies, lenders, and signers nationwide.</p>
+        <!-- Section 1: Hero Section (Standardized Consistent Height, Content-Aligned Background, Left Text & Right Image) -->
+        <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 min-h-[460px] lg:min-h-[500px] flex items-center overflow-hidden border-b border-gray-100 dark:border-gray-800">
+            <!-- Background Image with Gradient Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://lb-digital-consulting.io/wp-content/uploads/2020/05/world-map-1024x683.png"
+                    alt="Corporate Network Background" class="w-full h-full object-cover opacity-10 dark:opacity-15">
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-50 via-gray-50/95 to-white/80 dark:from-secondary-900 dark:via-secondary-900/95 dark:to-secondary-800/85"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    <!-- Left Side: Existing Text Content (Untouched Text) -->
+                    <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-right">
+                        <span class="text-primary-600 font-bold tracking-widest uppercase text-xs mb-3 block">Corporate Profile</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-secondary-900 dark:text-white mb-6 leading-tight">
+                            Transforming Loan Signings, <span class="text-primary-600">Empowering Franchisees.</span>
+                        </h1>
+                        <p class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            We are America's premier mobile notary and loan signing franchise network, delivering standardized excellence to title companies, lenders, and signers nationwide.
+                        </p>
+                    </div>
+
+                    <!-- Right Side: Relevant Image (Stacks as separate image in 368px & 768px) -->
+                    <div class="lg:col-span-5 w-full mt-4 lg:mt-0" data-aos="fade-left">
+                        <div class="relative w-full max-w-lg mx-auto">
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white dark:border-gray-700 bg-white dark:bg-secondary-800">
+                                <img src="https://lb-digital-consulting.io/wp-content/uploads/2020/05/world-map-1024x683.png"
+                                    alt="Corporate Franchise Leadership Team" class="w-full h-64 sm:h-72 lg:h-80 object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-secondary-900/60 via-transparent to-transparent"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -325,10 +351,10 @@
             <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-heading font-bold text-secondary-900 dark:text-white mb-6">Ready to join or partner with our network?</h2>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
+                    <a href="contact.html" class="w-full sm:w-64 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone-volume"></i> Contact Signing Desk
                     </a>
-                    <a href="enquire.html" class="w-full sm:w-64 h-14 bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 hover:bg-secondary-800 rounded-xl font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
+                    <a href="enquire.html" class="w-full sm:w-64 h-14 bg-secondary-900 dark:bg-white text-white dark:text-secondary-900 hover:bg-secondary-800 rounded-full font-bold text-base transition-all shadow-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i> Franchise Enquiry
                     </a>
                 </div>
